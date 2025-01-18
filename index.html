@@ -1,13 +1,425 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>FlowScripts - HTML Made Easy</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/jpg" href="https://i.ibb.co/xMnzd6n/imagecool-9.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>FlowScripts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="https://i.ibb.co/6B5dx1V/IMAGEFLOWSCRIPTSLOGOITEM.png"/>
+    <style>
+        body {
+            background-color: rgb(156, 156, 156);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            width: 80%;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            box-shadow: 0 0 14px rgba(0, 0, 0, 0.426);
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .imageholder {
+            margin: 0px 0;
+        }
+
+        .imageholder img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .unselectable3 {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .hidden-div {
+            display: none;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .clickable-text {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #f4f4f4;
+        }
+
+        .responsive-div {
+            width: 500px;
+            background-color: lightblue;
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        @media (max-width: 730px) {
+            .responsive-div {
+                width: 70%;
+            }
+        }
+
+        .searcha {
+            background-color: #f7f7f7;
+        }
+
+        input[type="text"] {
+            width: 165px; /* Set default width */
+            margin-left: 20px;
+        }
+
+        @media (max-width: 450px) {
+            input[type="text"] {
+                width: 80%; /* Set width to 100% on small screens */
+                margin-left: 0; /* Remove margin on small screens */
+            }
+        }
+
+        .animated-text {
+            font-size: 20px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>
+            <div class="clickable-text unselectable3" onclick="toggleDiv()">
+                <img draggable="false" style="height: 100px;" src="https://i.ibb.co/6B5dx1V/IMAGEFLOWSCRIPTSLOGOITEM.png" alt="FlowScripts">
+                BETA
+            </div>
+        </h2>
+        <br>
+        <div class="hidden-div" id="hiddenDiv">
+            <h6>FlowScripts isn't fully released yet - you are using the BETA version. There may be bugs.</h6>
+            <button class="close-btn" onclick="closeDiv()">Close</button>
+        </div>
+
+<div style="background-color: #0c7b51; height: 1px;"></div>
+
+        <div class="imageholder"></div>
+        <div style="background-color: rgb(255, 255, 255);" class="responsive-div">
+            <div id="searchpage" class="searcha">
+                <div style="background-color: rgb(227, 227, 227);">
+                    <div class="animated-text" id="animatedText">Search...</div>
+                </div>
+                <br>
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search Here" title="SEARCH FOR AN ITEM">
+                <ul id="myMenu">
+                    <li><a href="#htmlpage">HTML</a></li>
+                    <li><a href="#textpage">Text</a></li>
+                    <li><a href="#imagepage">Image</a></li>
+                    <li><a href="#hyperlinkpage">Hyperlink</a></li>
+                    <li><a href="#csspage">CSS</a></li>
+                    <li><a href="#javascriptpage">JavaScript</a></li>
 
 
-  <meta http-equiv="refresh" content="0.2;URL=https://flowscripts.github.io/home">
+                    <li><a href="#editor">Code Editor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="background-color: #f4f4f4;">
+            <div class="animated-text" id="animatedTextHolder"></div>
+        </div>
+
+
+
+        <div id="htmlpage" style="background-color: rgb(247, 247, 247);">
+          <div style="background-color: #e7e7e7;width: 100px;" > <h2>HTML</h2></div>
+            <p>What is HTML?<br>HTML stands for Hypertext Markup Language, and is used to create about 96% of all sites. Even FlowScripts (this website) is coded in HTML! Everything is made up of elements, they include a start tag, content, and an end tag.</p>
+     
+      <p>Example: &lt;b&gt; Text &lt;/b&gt;
+        <br>The text in the &lt;b&gt; tags will be bold.
+      </p></div>
+<br>
+      <div id="textpage" style="background-color: rgb(247, 247, 247);">
+     <div style="background-color: #e7e7e7;width: 70px;" > <h2>Text</h2></div>  
+        
+  <p>There are heading tags: &lt;h1&gt; H1 Text &lt;/h1&gt;
+    <br>The text will look like this:
+    <br><h1>H1 Text</h1>
+    <h2>H2 Text</h2>
+    <h3>H3 Text</h3>
+    <h4>H4 Text</h4>
+    <h5>H5 Text</h5>
+    <h6>H6 Text</h6>
+
+  </p>
+     </div>
+
+
+     <div id="imagepage" style="background-color: rgb(247, 247, 247);">
+      <div style="background-color: #e7e7e7;width: 70px;" > <h2>Image</h2></div>  
+         
+   <p>Image tag: &lt;img src="your-image.png" height="100px"&gt;
+   <h3>Links can also be used!</h3>
+ 
+   </p>
+   <img src="https://live.staticflickr.com/757/22795899224_7608e54874_b.jpg" height="100px">
+      </div>
+
+
+
+
+
+      <div id="hyperlinkpage" style="background-color: rgb(247, 247, 247);">
+        <div style="background-color: #e7e7e7;width: 150px;" > <h2>Hyperlink</h2></div>  
+           
+     <p>Hyperlinks are used to take you to another site (when  the text is clicked).
+  <br>link: <br>
+      &lt;a href="https://example.com"&gt; CLICK ME 
+      &lt;/p&gt;
+<br>
+    <a style="margin-left: 30px;" href="https://example.com">CLICK ME</a>   </p> 
+
+        </div>
+  
+
+
+
+
+
+      <div id="csspage" style="background-color: rgb(247, 247, 247);">
+        <div style="background-color: #e7e7e7;width: 50px;" > <h2>CSS</h2></div>  
+           
+     <p>CSS (Cascading Style Sheets), is used to style your website, and make it eye-catching.
+  <br>text color: <br>
+      &lt;p style=" color: blue; "&gt; Text 
+      &lt;/p&gt;
+
+      <br>You can use these colors: red, black, blue, green, yellow, white, purple, pink, (and more!).
+    </p> 
+
+        </div>
+  
+
+
+     
+
+
+      <div id="javascriptpage" style="background-color: rgb(247, 247, 247);">
+        <div style="background-color: #e7e7e7;width: 120px;" > <h2>JavaScript</h2></div>  
+           
+     <p>Used to make functional websites. 
+      <br>
+<br>
+
+      &lt;button onclick="toggleText()"&gt;Show/Hide Text   &lt;/button&gt;
+      &lt;div id="toggleText" style="display: none;">This is the toggled text.   &lt;/div>
+      &lt;
+      script>
+          function toggleText() {
+              const toggleDiv = document.getElementById('toggleText');
+              if (toggleDiv.style.display === 'none') {
+                  toggleDiv.style.display = 'block';
+              } else {
+                  toggleDiv.style.display = 'none';
+              }
+          }
+          &lt;/script&gt;
+<br>
+<br>Here is the output:
+          <button onclick="toggleText()">Show/Hide Text</button>
+          <div id="toggleText" style="display: none;">This is the toggled text.</div>
+      
+          <script>
+              function toggleText() {
+                  const toggleDiv = document.getElementById('toggleText');
+                  if (toggleDiv.style.display === 'none') {
+                      toggleDiv.style.display = 'block';
+                  } else {
+                      toggleDiv.style.display = 'none';
+                  }
+              }
+          </script>
+    
+      
+     
+   
+     </p>
+    
+        </div>
+  
+
+
+
+
+
+
+
+
+
+
+     <div id="editor" style="background-color: rgb(247, 247, 247);">
+      <div style="background-color: #e7e7e7;width: 100px;" > <h2>Code Editor</h2></div>  
+        
+          <div id="buttonContainer">
+              <button id="hideButton">X</button>
+              <button id="undoButton">Undo</button>
+              <button id="redoButton">Redo</button>
+              <button id="copyButton">Copy Code</button>
+          </div>
+        
+      
+              <form></form>
+              <br>
+              <div id="inputArea">
+                  <textarea autocorrect="off" spellcheck="false" id="htmlInput" placeholder="Enter HTML Code Here" style="width: 178px; height: 51px;"></textarea>
+              </div>
+              <div id="outputArea">
+                  <iframe id="htmlOutput" style="width: 100%; height: 100%; border: none;"></iframe>
+
+              </div>
+              <br>
+          </div>
+      
+          <script>
+              const htmlInput = document.getElementById('htmlInput');
+              const htmlOutput = document.getElementById('htmlOutput').contentWindow.document;
+              const hideButton = document.getElementById('hideButton');
+              const undoButton = document.getElementById('undoButton');
+              const redoButton = document.getElementById('redoButton');
+              const copyButton = document.getElementById('copyButton');
+      
+              let history = [];
+              let index = -1;
+      
+              const saveState = () => {
+                  // Save current state
+                  history = history.slice(0, index + 1);
+                  history.push(htmlInput.value);
+                  index++;
+              };
+      
+              const undo = () => {
+                  if (index > 0) {
+                      index--;
+                      htmlInput.value = history[index];
+                      updateOutput();
+                  }
+              };
+      
+              const redo = () => {
+                  if (index < history.length - 1) {
+                      index++;
+                      htmlInput.value = history[index];
+                      updateOutput();
+                  }
+              };
+      
+              const updateOutput = () => {
+                  htmlOutput.open();
+                  htmlOutput.write(htmlInput.value);
+                  htmlOutput.close();
+              };
+      
+              const copyToClipboard = () => {
+                  htmlInput.select();
+                  document.execCommand('copy');
+              };
+      
+              const toggleButtons = () => {
+                  const areButtonsVisible = undoButton.style.display !== 'none';
+                  undoButton.style.display = areButtonsVisible ? 'none' : 'inline-block';
+                  redoButton.style.display = areButtonsVisible ? 'none' : 'inline-block';
+                  copyButton.style.display = areButtonsVisible ? 'none' : 'inline-block';
+                  hideButton.textContent = areButtonsVisible ? 'Menu' : 'X';
+              };
+      
+              htmlInput.addEventListener('input', () => {
+                  saveState();
+                  updateOutput();
+              });
+      
+              hideButton.addEventListener('click', toggleButtons);
+              undoButton.addEventListener('click', undo);
+              redoButton.addEventListener('click', redo);
+              copyButton.addEventListener('click', copyToClipboard);
+      
+              // Initial save
+              saveState();
+          </script>
+      
+      
+     <div  style="background-color: rgb(247, 247, 247);">
+   
+         
+   <p>Copyright FlowScripts
+   </p>
+      </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <span id="PING_CONTENT_AUTOPLAY_DETECTION" style="display: none;"></span></body></div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <script>
+        function toggleDiv() {
+            const hiddenDiv = document.getElementById('hiddenDiv');
+            hiddenDiv.style.display = (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') ? 'block' : 'none';
+        }
+
+        function closeDiv() {
+            document.getElementById('hiddenDiv').style.display = 'none';
+        }
+
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                li[i].style.display = (a.innerHTML.toUpperCase().indexOf(filter) > -1) ? '' : 'none';
+            }
+        }
+
+        function animateText() {
+            let textElement = document.getElementById('animatedText');
+            let state = 0;
+            setInterval(() => {
+                textElement.innerHTML = (state === 0) ? 'Search' : 'Search...';
+                state = 1 - state;
+            }, 1000);
+        }
+
+        window.onload = animateText;
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
