@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FlowScripts Error 404</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://i.ibb.co/xMnzd6n/imagecool-9.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="line-height: 10px;background-color: rgb(255, 255, 255); text-align: center; padding: 50px; font-family: Arial, Helvetica;">
+  <h2 class="txt404">Error</h2> <h1 class="txt404" style="font-size: 40px;">404</h1>
+  <div class="imageholder">
+    <img class="txt404" src="https://i.ibb.co/xMnzd6n/imagecool-9.png" alt="FlowScripts" style="height: 80px;">
+ </div>
+
+    <p id="toggleLink2" class="txt404">This page does not exist.</p>
+   
+    
+        <style>
+            #toggleText {
+                display: none;
+            }
+        </style>
+         <style>
+
+.txt404{
+  -webkit-user-select:none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+         a:hover{color: rgb(199, 0, 0);}
+      </style>
+      
+    </head>
+    <body>
+        <a href="#" id="toggleLink" onclick="showText(); return false;">More Info</a>
+        <p  id="toggleText"><b style="font-size: 20px;">
+          
+          
+     
+  <br>
+          
+          Why am I seeing this?</b>
+        <br>  <br><br><br>
+            The page has been deleted or removed.
+            <br><br><br>
+            The servers cannot perform a secure connection to the URL.
+            <br><br><br>
+            You have misspelled the web address.
+       
+
+
+
+<br><br><br><br><br><br>
+       
+        </p>
+    
+        <script>
+            function showText() {
+                document.getElementById("toggleText").style.display = "block";
+                document.getElementById("toggleLink").style.display = "none";
+                document.getElementById("toggleLink2").style.display = "none";
+            }
+        </script>    <p><a href="https://FlowScripts.github.io/home">Return to Home Page</a></p>
+<br><br><br><br><br><br>
+     <p style="color: rgb(98, 98, 98);" id="randomText"></p>
+
+    <script>
+        // List of texts
+        const texts = [
+            "PAGE_LOST", 
+        "PAGE_FORGOTTEN",
+     
+        "INVALID_PAGE",
+        "INVALID_URL",
+        "PAGE_FAILED",
+        ];
+
+        // Function to select and display random text
+        function displayRandomText() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById("randomText").innerText = texts[randomIndex];
+        }
+
+        // Call the function to display random text on page load
+        displayRandomText();
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
